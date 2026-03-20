@@ -15,15 +15,23 @@
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
                 background: white !important;
+                /* 取消 flex 置中，讓容器自然靠左填滿整頁 */
+                display: block !important;
+                padding: 0 !important;
+                margin: 0 !important;
             }
             .no-print { display: none !important; }
             .page-container {
                 box-shadow: none !important;
                 margin: 0 !important;
-                width: 210mm !important;
-                height: 297mm !important;
+                /* 100% 寬度跟隨頁面，不用固定 210mm 避免偏移裁切 */
+                width: 100% !important;
+                max-width: 100% !important;
+                /* min-height 而非固定高度，內容可自然填滿不硬裁 */
+                height: auto !important;
+                min-height: 297mm !important;
                 padding: 12mm 15mm !important;
-                overflow: hidden;
+                overflow: visible !important;
                 background: white !important;
             }
         }
@@ -258,12 +266,21 @@
             </div>
         </div>
 
-        <div class="absolute bottom-6 left-[15mm] right-[15mm] border-mag-thin pt-1.5 text-center text-[9px] text-slate-400 uppercase tracking-widest">
-            {{ personal.footer_text }}
-        </div>
     </div>
 
     <script>
+        // A4 高度（像素，96 DPI）：297mm / 25.4 * 96 ≈ 1122.5px
+        const A4_H_PX = 297 / 25.4 * 96;
+
+        function scaleToFit() {
+            const el = document.querySelector('.page-container');
+            el.style.zoom = '';                          // 先重置，量真實高度
+            const naturalH = el.scrollHeight;
+            if (naturalH > A4_H_PX) {
+                el.style.zoom = (A4_H_PX / naturalH).toFixed(6);
+            }
+        }
+
         function switchLang(lang) {
             if (lang === 'zh') {
                 document.getElementById('resume-zh').style.display = 'block';
@@ -276,7 +293,11 @@
                 document.getElementById('btn-en').className = "text-sm font-semibold transition-colors text-blue-700 focus:outline-none";
                 document.getElementById('btn-zh').className = "text-sm font-semibold transition-colors text-slate-400 hover:text-slate-600 focus:outline-none";
             }
+            scaleToFit();
         }
+
+        // 等字型載入完畢再量（字型影響行高）
+        document.fonts.ready.then(scaleToFit);
     </script>
 </body>
 </html>
