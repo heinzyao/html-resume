@@ -21,6 +21,13 @@
                 margin: 0 !important;
             }
             .no-print { display: none !important; }
+            /* 強制雙欄格線，不依賴 md: 斷點（列印 DPI 換算可能低於 768px）*/
+            .md\:grid-cols-12 {
+                display: grid !important;
+                grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+            }
+            .md\:col-span-4 { grid-column: span 4 / span 4 !important; }
+            .md\:col-span-8 { grid-column: span 8 / span 8 !important; }
             .page-container {
                 box-shadow: none !important;
                 margin: 0 !important;
@@ -109,32 +116,32 @@
                             
                             <div class="border-b border-slate-200 pb-1.5">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">程式語言</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105fffbc0></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd7bc0></p>
                             </div>
                             
                             <div class="border-b border-slate-200 pb-1.5">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">機器學習 / AI</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105fffd80></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd7d80></p>
                             </div>
                             
                             <div class="border-b border-slate-200 pb-1.5">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">資料分析</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105fffdc0></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd7dc0></p>
                             </div>
                             
                             <div class="border-b border-slate-200 pb-1.5">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">視覺化 / BI</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105fffe00></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd7e00></p>
                             </div>
                             
                             <div class="border-b border-slate-200 pb-1.5">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">DevOps / 雲端</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105fffe40></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd7e40></p>
                             </div>
                             
                             <div class="">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">應用領域</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105fffe80></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd7e80></p>
                             </div>
                             
                         </div>
@@ -383,27 +390,27 @@
                             
                             <div class="border-b border-slate-200 pb-1.5">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">Languages</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105fffec0></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd7ec0></p>
                             </div>
                             
                             <div class="border-b border-slate-200 pb-1.5">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">ML / AI</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105ffff00></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd7f00></p>
                             </div>
                             
                             <div class="border-b border-slate-200 pb-1.5">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">Data & BI</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105fff780></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd7780></p>
                             </div>
                             
                             <div class="border-b border-slate-200 pb-1.5">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">DevOps / Cloud</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x106003fc0></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bdbfc0></p>
                             </div>
                             
                             <div class="">
                                 <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">Domains</h3>
-                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x105fff7c0></p>
+                                <p class="text-[11.5px] text-slate-600 leading-snug"><built-in method items of dict object at 0x101bd77c0></p>
                             </div>
                             
                         </div>
