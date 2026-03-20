@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Yao - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif+TC:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* 列印專用設定 (Ctrl+P / Cmd+P 匯出 PDF 時觸發) */
+        @media print {
+            @page { size: A4; margin: 0; }
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                background: white !important;
+            }
+            .no-print { display: none !important; }
+            .page-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                padding: 12mm 15mm !important;
+                overflow: hidden;
+                background: white !important;
+            }
+        }
+        /* 雜誌風字體與邊框設定 */
+        .font-serif-mag { font-family: 'Merriweather', 'Noto Serif TC', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        .border-mag-thick { border-top: 4px solid #0f172a; border-bottom: 1px solid #0f172a; }
+        .border-mag-thin { border-top: 1px solid #cbd5e1; border-bottom: 1px solid #cbd5e1; }
+    </style>
+</head>
+<body class="min-h-screen bg-[#ecebdc] text-slate-900 py-10 print:py-0 print:bg-white flex justify-center font-sans">
+
+    {%- set icon_email %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    {%- endset %}
+    {%- set icon_phone %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    {%- endset %}
+    {%- set icon_linkedin %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+    {%- endset %}
+    {%- set icon_github %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+    {%- endset %}
+    {%- set icon_globe %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-500"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+    {%- endset %}
+
+    <div class="no-print fixed top-6 right-6 bg-white shadow-lg rounded-full px-4 py-2 flex items-center space-x-2 border border-slate-200 z-50">
+        {{ icon_globe }}
+        <button onclick="switchLang('en')" id="btn-en" class="text-sm font-semibold transition-colors text-slate-400 hover:text-slate-600 focus:outline-none">EN</button>
+        <span class="text-slate-300">|</span>
+        <button onclick="switchLang('zh')" id="btn-zh" class="text-sm font-semibold transition-colors text-blue-700 focus:outline-none">中文</button>
+    </div>
+
+    <div class="no-print fixed bottom-6 right-6 z-50">
+        <button onclick="window.print()" class="bg-slate-900 text-white text-xs font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-slate-700 transition-colors flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+            Download PDF
+        </button>
+    </div>
+
+    <div class="page-container w-full max-w-[210mm] bg-[#FDFCF8] shadow-2xl relative p-[12mm_15mm] mx-auto box-border overflow-hidden">
+
+        <!-- 中文版 -->
+        <div id="resume-zh" style="display: block;">
+            <header class="mb-6 text-center">
+                <h1 class="font-serif-mag text-4xl font-black text-slate-900 uppercase tracking-widest mb-1.5">
+                    {{ personal.name_zh }} <span class="text-xl font-light text-slate-500 tracking-normal ml-2">{{ personal.name_suffix_zh }}</span>
+                </h1>
+                <div class="flex flex-wrap justify-center items-center gap-3 text-xs mt-3 text-slate-700 font-medium">
+                    <a href="mailto:{{ personal.email }}" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        {{ icon_email }}
+                        {{ personal.email }}
+                    </a>
+                    <span class="text-slate-300">•</span>
+                    <span class="flex items-center gap-1">
+                        {{ icon_phone }}
+                        {{ personal.phone }}
+                    </span>
+                    <span class="text-slate-300">•</span>
+                    <a href="{{ personal.linkedin_url }}" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        {{ icon_linkedin }}
+                        LinkedIn
+                    </a>
+                    <span class="text-slate-300">•</span>
+                    <a href="{{ personal.github_url }}" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        {{ icon_github }}
+                        GitHub
+                    </a>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-7">
+                <div class="md:col-span-4 space-y-6">
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">個人簡介</h2>
+                        <p class="text-[11.5px] leading-relaxed text-slate-700 text-justify">
+                            {{ summary.zh | trim }}
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">技術技能</h2>
+                        <div class="space-y-3">
+                            {% for skill in skills_zh %}
+                            <div class="{{ 'border-b border-slate-200 pb-1.5' if not loop.last else '' }}">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">{{ skill.name }}</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">{{ skill.items }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">學歷</h2>
+                        <div class="space-y-3">
+                            {% for edu in education %}
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">{{ edu.degree_zh }}</h3>
+                                <p class="text-[11px] text-slate-600 italic mt-0.5">{{ edu.school_zh }}</p>
+                                <p class="text-[10px] font-medium text-slate-400 mt-0.5">{{ edu.period }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">技能認證</h2>
+                        <div class="space-y-2.5">
+                            {% for cert in certifications %}
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">{{ cert.name_zh }}</h3>
+                                <p class="text-[10.5px] text-slate-600 mt-0.5">{{ cert.issuer_zh }}</p>
+                                <p class="text-[10px] text-slate-400 mt-0.5">{{ cert.date }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+                </div>
+
+                <div class="md:col-span-8">
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-4 text-slate-900">工作經歷</h2>
+                        <div class="space-y-4">
+                            {% for job in experience %}
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">{{ job.title_zh }} <span class="text-slate-400 font-sans mx-1">|</span> {{ job.company_zh }}</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">{{ job.period_zh }}</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    {% for bullet in job.bullets_zh %}
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start">
+                                        <span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span>
+                                        <span><span class="font-bold text-slate-800">{{ bullet.title }}</span>{{ bullet.desc | trim }}</span>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- 英文版 -->
+        <div id="resume-en" style="display: none;">
+            <header class="mb-6 text-center">
+                <h1 class="font-serif-mag text-4xl font-black text-slate-900 uppercase tracking-widest mb-1.5">
+                    {{ personal.name_en }} <span class="text-xl font-light text-slate-500 tracking-normal ml-2">{{ personal.name_suffix_en }}</span>
+                </h1>
+                <div class="flex flex-wrap justify-center items-center gap-3 text-xs mt-3 text-slate-700 font-medium">
+                    <a href="mailto:{{ personal.email }}" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        {{ icon_email }}
+                        {{ personal.email }}
+                    </a>
+                    <span class="text-slate-300">•</span>
+                    <a href="{{ personal.linkedin_url }}" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        {{ icon_linkedin }}
+                        LinkedIn
+                    </a>
+                    <span class="text-slate-300">•</span>
+                    <a href="{{ personal.github_url }}" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        {{ icon_github }}
+                        GitHub
+                    </a>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-7">
+                <div class="md:col-span-4 space-y-6">
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">Professional Summary</h2>
+                        <p class="text-[11.5px] leading-relaxed text-slate-700 text-justify">
+                            {{ summary.en | trim }}
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">Technical Skills</h2>
+                        <div class="space-y-3">
+                            {% for skill in skills_en %}
+                            <div class="{{ 'border-b border-slate-200 pb-1.5' if not loop.last else '' }}">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">{{ skill.name }}</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">{{ skill.items }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">Education</h2>
+                        <div class="space-y-3">
+                            {% for edu in education %}
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">{{ edu.degree_en }}</h3>
+                                <p class="text-[11px] text-slate-600 italic mt-0.5">{{ edu.school_en }}</p>
+                                <p class="text-[10px] font-medium text-slate-400 mt-0.5">{{ edu.period }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+                </div>
+
+                <div class="md:col-span-8">
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-4 text-slate-900">Work Experience</h2>
+                        <div class="space-y-4">
+                            {% for job in experience %}
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">{{ job.title_en }} <span class="text-slate-400 font-sans mx-1">|</span> {{ job.company_en }}</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">{{ job.period_en }}</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    {% for bullet in job.bullets_en %}
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start">
+                                        <span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span>
+                                        <span><span class="font-bold text-slate-800">{{ bullet.title }}</span>{{ bullet.desc | trim }}</span>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 left-[15mm] right-[15mm] border-mag-thin pt-1.5 text-center text-[9px] text-slate-400 uppercase tracking-widest">
+            {{ personal.footer_text }}
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            if (lang === 'zh') {
+                document.getElementById('resume-zh').style.display = 'block';
+                document.getElementById('resume-en').style.display = 'none';
+                document.getElementById('btn-zh').className = "text-sm font-semibold transition-colors text-blue-700 focus:outline-none";
+                document.getElementById('btn-en').className = "text-sm font-semibold transition-colors text-slate-400 hover:text-slate-600 focus:outline-none";
+            } else {
+                document.getElementById('resume-zh').style.display = 'none';
+                document.getElementById('resume-en').style.display = 'block';
+                document.getElementById('btn-en').className = "text-sm font-semibold transition-colors text-blue-700 focus:outline-none";
+                document.getElementById('btn-zh').className = "text-sm font-semibold transition-colors text-slate-400 hover:text-slate-600 focus:outline-none";
+            }
+        }
+    </script>
+</body>
+</html>
