@@ -1,0 +1,258 @@
+personal:
+  name_zh: "姚璇亨"
+  name_suffix_zh: "(Henry Yao)"
+  name_en: "HSUAN HENG YAO"
+  name_suffix_en: "(Henry)"
+  email: "henryyao1126@gmail.com"
+  phone: "0913-199-297"
+  linkedin_url: "https://www.linkedin.com/in/hsuan-heng-yao-31075a5b/"
+  github_url: "https://github.com/heinzyao"
+  footer_text: "Henry Yao — Professional Profile"
+
+summary:
+  zh: >
+    具備 5 年以上資料科學領域實務經驗，專精於將複雜數據轉化為可執行的商業決策。擅長使用
+    Python、SQL 與 Google Cloud Platform，具備機器學習模型開發、自然語言處理、儀表板建置與
+    KPI 指標定義能力。擁有在銀行業將機器學習模型、生成式 AI 工具整合至營運環境的實戰經驗，
+    代表成果包括防詐 AI 模型效能提升近 2 倍（2025 PTGA 標竿專案）及行銷活動轉換率達 30%。
+    取得 iPAS AI 應用規劃師中級認證。
+  en: >
+    Data professional with 4+ years of hands-on experience in machine learning, NLP, and
+    business intelligence within the financial services sector. Proven track record of translating
+    complex data into actionable insights — from building predictive ML models that doubled
+    campaign conversion rates, to deploying LLM-powered automation pipelines in production.
+    Combines a strong technical foundation (Python, PyTorch, SQL, Docker, GCP) with
+    cross-functional communication skills honed across advertising, trade development, and
+    healthtech roles.
+
+skills_zh:
+  - name: "程式語言"
+    items: "Python · SQL（SQL Server · PostgreSQL）· Bash / Shell Script"
+  - name: "機器學習 / AI"
+    items: "PyTorch · Scikit-Learn · Transformers（HuggingFace）· RNN · TF-IDF · LLM API 整合"
+  - name: "資料分析"
+    items: "Pandas · NumPy · SciPy · NLP / 意見探勘 · 特徵工程 · 統計建模"
+  - name: "視覺化 / BI"
+    items: "Tableau · Streamlit · Matplotlib"
+  - name: "DevOps / 雲端"
+    items: "Docker · Docker Compose · GCP · Git · Linux"
+  - name: "應用領域"
+    items: "金融科技 · 反詐騙 AI · CRM 分析 · 數位醫療 · 消費者研究"
+
+skills_en:
+  - name: "Languages"
+    items: "Python · SQL (SQL Server, PostgreSQL) · Bash"
+  - name: "ML / AI"
+    items: "PyTorch · Scikit-Learn · Transformers (HuggingFace) · RNN · TF-IDF · LLM API Integration"
+  - name: "Data & BI"
+    items: "Tableau · Streamlit · Pandas · NumPy · SciPy · NLP / Opinion Mining"
+  - name: "DevOps / Cloud"
+    items: "Docker · Docker Compose · GCP · Git · Linux · CI/CD"
+  - name: "Domains"
+    items: "Banking & FinTech · CRM Analytics · Digital Health · Consumer Insights"
+
+education:
+  - degree_zh: "數位內容與技術碩士"
+    degree_en: "M.S. in Digital Content and Technology"
+    school_zh: "國立政治大學 (NCCU)"
+    school_en: "National Chengchi University (NCCU)"
+    period: "2018 — 2020"
+  - degree_zh: "政治學學士（國際關係組）"
+    degree_en: "B.A. in Political Science / International Relations"
+    school_zh: "國立臺灣大學 (NTU)"
+    school_en: "National Taiwan University (NTU)"
+    period: "2007 — 2010"
+
+certifications:
+  - name_zh: "AI 應用規劃師能力鑑定 — 中級（iPAS）"
+    issuer_zh: "經濟部產業人才能力鑑定"
+    date: "2025.11"
+  - name_zh: "生成式 AI 能力認證"
+    issuer_zh: "財團法人資訊工業策進會"
+    date: "2025.09"
+
+experience:
+  - title_zh: "商業分析師"
+    title_en: "Business Analyst"
+    company_zh: "凱基商業銀行"
+    company_en: "KGI Commercial Bank"
+    period_zh: "2021 年 12 月 — 至今"
+    period_en: "Dec 2021 – Present"
+    bullets_zh:
+      - title: "防詐 AI 模型重建："
+        desc: >
+          於 2025 年專案管理大獎（PTGA）標竿專案「智能雷達防詐網 AI RADAR」中，主導開發環境建置、
+          重構資料流，進行模型重新訓練與部署，將原始模型 Recall 與 Precision 提升近 2 倍。
+      - title: "預測模型開發："
+        desc: >
+          設計分類模型預測會員升等意願，應用於精準行銷活動，達成 30% 轉換率，佔整體升等人數
+          15%，績效超過傳統規則基準的兩倍以上。
+      - title: "LLM 自動化流程："
+        desc: >
+          整合底層顧客交易資料與開源 LLM API，建立高成本效益的自動化客戶貼標系統，供業務單位
+          經營參考。
+      - title: "行為模式 NLP 分析："
+        desc: >
+          對行動銀行足跡進行資料清洗與文字處理，運用 PyTorch 與 Scikit-Learn 建置 RNN 及
+          TF-IDF 模型，分析會員行為特徵。
+      - title: "輿情監控自動化："
+        desc: >
+          設計 Google / Threads 自動搜尋爬蟲，以 Docker 容器部署至 GCP 雲端執行，提供業務單位
+          持續輿情訊號。
+      - title: "管理報表建置："
+        desc: >
+          開發會員動態追蹤 Tableau 儀表板，讓高階主管與業務單位能從多個維度即時監控 CRM 年度
+          KPI。
+    bullets_en:
+      - title: "Generative AI Implementation: "
+        desc: >
+          Integrated customer transaction data with open-source LLM APIs to build a
+          cost-effective automated customer-tagging pipeline, reducing manual classification
+          effort and supporting downstream CRM operations.
+      - title: "Predictive Modeling: "
+        desc: >
+          Engineered ML models to predict membership tier upgrades for targeted marketing
+          campaigns, achieving a 30% conversion rate — representing 15% of total upgrades and
+          more than doubling the performance of rule-based criteria.
+      - title: "User Behavior Analysis: "
+        desc: >
+          Applied NLP (TF-IDF) and deep learning (RNN via PyTorch) to mobile banking behavioral
+          footprints, uncovering usage patterns that informed product and UX decisions.
+      - title: "Cloud Automation: "
+        desc: >
+          Architected and deployed automated public-opinion web scrapers (Google, Threads) using
+          Docker containers on GCP, enabling continuous sentiment monitoring for the business units.
+      - title: "Business Intelligence: "
+        desc: >
+          Built Tableau dashboards for dynamic membership tracking, giving executives and business
+          units real-time visibility into multi-dimensional CRM KPIs and annual targets.
+
+  - title_zh: "資料分析工程師"
+    title_en: "Data Analysis Engineer"
+    company_zh: "臺灣益謙股份有限公司"
+    company_en: "Taiwan Echain Co. Ltd."
+    period_zh: "2020 年 10 月 — 2021 年 7 月"
+    period_en: "Oct 2020 – Jul 2021"
+    bullets_zh:
+      - title: "模組整合與 MVP 交付："
+        desc: >
+          運用 Docker、Git 與 Linux 串接產學合作與外包商程式模組，完成 POC 至 MVP 開發，
+          促成約新台幣 100 萬元初期營收。
+      - title: "臨床資料處理："
+        desc: >
+          以 SciPy 進行 FFT 波形資料轉換，並以 Streamlit 開發即時視覺化工具，每日為醫師節省
+          2 小時以上作業時間。
+      - title: "模型校正與部署："
+        desc: >
+          與外部資料顧問團隊合作，校正並部署用於預測波形的機器學習迴歸模型，應用於血壓量測儀器
+          資料校正。
+    bullets_en:
+      - title: "Product Development: "
+        desc: >
+          Led end-to-end POC and MVP development by integrating modules from academic partners
+          and external vendors using Docker, Git, and Linux; contributed to approximately NT$1 M
+          in early-stage revenue.
+      - title: "Clinical Data Processing: "
+        desc: >
+          Built SciPy-based FFT waveform conversion and Streamlit visualization tools for
+          clinical pulse data, saving physicians over 2 hours of manual data-processing work
+          per day.
+      - title: "System Calibration: "
+        desc: >
+          Collaborated with data consultants to calibrate and productionize ML regression models
+          used to correct blood pressure device readings in clinical settings.
+
+  - title_zh: "研究助理"
+    title_en: "Research Assistant"
+    company_zh: "政大資科系語言與知識科技實驗室"
+    company_en: "Dept. of Computer Science, NCCU"
+    period_zh: "2019 年 8 月 — 2020 年 7 月"
+    period_en: "Aug 2019 – Jul 2020"
+    bullets_zh:
+      - title: "意見探勘研究："
+        desc: >
+          運用資料爬蟲與 Transformer 預訓練語言模型，對酒評網站 2,500 筆評論文本進行意見探勘
+          與預測，完成研究計畫。
+      - title: "產學合作："
+        desc: >
+          參與 KKBOX 產學合作計畫，透過 IoT log 語音搜尋記錄探勘與 App Store 評論分析，提出
+          使用者體驗改良建議。
+      - title: "教學輔導："
+        desc: "擔任自然語言處理課程助教，負責 70 名以上學生之課程輔導與作業指導。"
+    bullets_en:
+      - title: "Opinion Mining: "
+        desc: >
+          Applied web scraping and Transformer pre-trained models to perform opinion mining and
+          sentiment prediction across 2,500 wine reviews.
+      - title: "Education: "
+        desc: >
+          Served as Teaching Assistant for an NLP course, supporting over 70 students through
+          guidance, code review, and grading.
+      - title: "Industry Collaboration: "
+        desc: >
+          Mined IoT voice-search logs and App Store reviews in an industry collaboration with
+          KKBOX, delivering UX improvement recommendations.
+
+  - title_zh: "業務經理"
+    title_en: "Account Manager"
+    company_zh: "李奧貝納股份有限公司"
+    company_en: "Leo Burnett Taiwan"
+    period_zh: "2017 年 2 月 — 2019 年 4 月"
+    period_en: "Feb 2017 – May 2019"
+    bullets_zh:
+      - title: "品牌策略："
+        desc: >
+          協調內部策略、創意與日本電通，開發嘉新企業集團 re-branding 策略，促成近 5 年唯一
+          落地的品牌宣言影片企劃。
+      - title: "跨國品牌管理："
+        desc: >
+          協助雀巢咖啡、海尼根台灣等跨國企業進行 3 個年度專案的品牌素材本地化、競品調查與
+          消費者體驗設計。
+    bullets_en:
+      - title: "Strategic Branding: "
+        desc: >
+          Coordinated with internal strategy/creative teams and Dentsu Japan to develop a
+          comprehensive re-branding strategy for Chia Hsin Cement Group.
+      - title: "International Brand Management: "
+        desc: >
+          Managed annual campaigns for MNCs including Nescafé and Heineken Taiwan, covering brand
+          localization, competitive analysis, and consumer experience design.
+
+  - title_zh: "專案經理（數位行銷組）"
+    title_en: "Project Manager"
+    company_zh: "外貿協會 (TAITRA)"
+    company_en: "Taiwan External Trade Development Council (TAITRA)"
+    period_zh: "2015 年 11 月 — 2017 年 1 月"
+    period_en: "Nov 2015 – Jan 2017"
+    bullets_zh:
+      - title: "流失分析："
+        desc: >
+          透過業務系統資料分析定義關鍵流失指標，減少台北國際會議中心（TICC）約 10% 的場地
+          取消預訂損失。
+      - title: "社群行銷成效："
+        desc: >
+          擔任台北國際會議中心 Facebook 社群行銷負責人，以新台幣 30,000 元年度經費，一年內
+          增加 10 倍專頁追蹤人數。
+    bullets_en:
+      - title: "Churn Analysis: "
+        desc: >
+          Analyzed business system data to identify key churn indicators at the Taipei
+          International Convention Center (TICC), driving a ~10% reduction in venue cancellation
+          losses.
+
+  - title_zh: "專案副理"
+    title_en: "Associate Project Manager"
+    company_zh: "迷你麥斯有限公司"
+    company_en: "Minimax Design Co. Ltd."
+    period_zh: "2013 年 11 月 — 2015 年 10 月"
+    period_en: "Nov 2013 – Oct 2015"
+    bullets_zh:
+      - title: "市場調查："
+        desc: >
+          參與百威英博中國、聯合利華中國的新上市產品使用者調查計畫，協助設計品牌溝通策略與
+          廣告製作執行。
+    bullets_en:
+      - title: "Consumer Research: "
+        desc: >
+          Supported new product launch user surveys for AB InBev China and Unilever China,
+          contributing to brand communication strategy and advertising execution.
