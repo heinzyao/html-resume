@@ -21,6 +21,13 @@
                 margin: 0 !important;
             }
             .no-print { display: none !important; }
+            /* 強制雙欄格線，不依賴 md: 斷點（列印 DPI 換算可能低於 768px）*/
+            .md\:grid-cols-12 {
+                display: grid !important;
+                grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+            }
+            .md\:col-span-4 { grid-column: span 4 / span 4 !important; }
+            .md\:col-span-8 { grid-column: span 8 / span 8 !important; }
             .page-container {
                 box-shadow: none !important;
                 margin: 0 !important;
