@@ -31,7 +31,14 @@ def build(pdf: bool = False) -> None:
             page.wait_for_load_state("networkidle")
             page.evaluate("document.fonts.ready")   # 等字型載入
 
-            # 量內容實際高度，計算縮放比例
+            # 重置所有 JS 套用的 zoom，讓 page.pdf(scale=) 單獨處理縮放
+            # → Playwright 的 scale 參數能正確保留 PDF 連結 annotation
+            page.evaluate("""() => {
+                document.querySelector('.page-container').style.zoom = '';
+                document.getElementById('print-scale-style').textContent = '';
+            }""")
+
+            # 量內容自然高度，計算縮放比例
             content_h = page.evaluate(
                 "document.querySelector('.page-container').scrollHeight"
             )
