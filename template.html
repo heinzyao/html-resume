@@ -6,6 +6,8 @@
     <title>Henry Yao - Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif+TC:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 列印縮放（由 JS 動態寫入）-->
+    <style id="print-scale-style"></style>
 
     <style>
         /* 列印專用設定 (Ctrl+P / Cmd+P 匯出 PDF 時觸發) */
@@ -28,6 +30,8 @@
             }
             .md\:col-span-4 { grid-column: span 4 / span 4 !important; }
             .md\:col-span-8 { grid-column: span 8 / span 8 !important; }
+            /* 列印縮放改由 body zoom 處理（body 層級 zoom 能正確保留 PDF 連結） */
+            .page-container { zoom: unset !important; }
             .page-container {
                 box-shadow: none !important;
                 margin: 0 !important;
@@ -283,9 +287,15 @@
             const el = document.querySelector('.page-container');
             el.style.zoom = '';                          // 先重置，量真實高度
             const naturalH = el.scrollHeight;
-            if (naturalH > A4_H_PX) {
-                el.style.zoom = (A4_H_PX / naturalH).toFixed(6);
-            }
+            const scale = Math.min(1, A4_H_PX / naturalH);
+
+            // 螢幕預覽：zoom 套在容器上
+            if (scale < 1) el.style.zoom = scale.toFixed(6);
+
+            // 瀏覽器列印：改用 body zoom，讓 Chrome 正確計算 PDF 連結座標
+            document.getElementById('print-scale-style').textContent = scale < 1
+                ? `@media print { body { zoom: ${scale.toFixed(6)} !important; } }`
+                : '';
         }
 
         function switchLang(lang) {
