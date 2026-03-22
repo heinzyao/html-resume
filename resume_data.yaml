@@ -65,10 +65,14 @@ education:
 
 certifications:
   - name_zh: "AI 應用規劃師能力鑑定 — 中級（iPAS）"
+    name_en: "AI Application Planner Certification — Intermediate (iPAS)"
     issuer_zh: "經濟部產業人才能力鑑定"
+    issuer_en: "Ministry of Economic Affairs, IPAS"
     date: "2025.11"
   - name_zh: "生成式 AI 能力認證"
+    name_en: "Generative AI Competency Certification"
     issuer_zh: "財團法人資訊工業策進會"
+    issuer_en: "Institute for Information Industry (III)"
     date: "2025.09"
 
 experience:
