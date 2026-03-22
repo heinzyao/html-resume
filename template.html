@@ -126,7 +126,7 @@
                     </section>
 
                     <section>
-                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">技術技能</h2>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">專業技能</h2>
                         <div class="space-y-3">
                             {% for skill in skills_zh %}
                             <div class="{{ 'border-b border-slate-200 pb-1.5' if not loop.last else '' }}">
@@ -151,7 +151,7 @@
                     </section>
 
                     <section>
-                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">技能認證</h2>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">技術認證</h2>
                         <div class="space-y-2.5">
                             {% for cert in certifications %}
                             <div>
@@ -244,6 +244,19 @@
                                 <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">{{ edu.degree_en }}</h3>
                                 <p class="text-[11px] text-slate-600 italic mt-0.5">{{ edu.school_en }}</p>
                                 <p class="text-[10px] font-medium text-slate-400 mt-0.5">{{ edu.period }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">Certifications</h2>
+                        <div class="space-y-2.5">
+                            {% for cert in certifications %}
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">{{ cert.name_en }}</h3>
+                                <p class="text-[10.5px] text-slate-600 mt-0.5">{{ cert.issuer_en }}</p>
+                                <p class="text-[10px] text-slate-400 mt-0.5">{{ cert.date }}</p>
                             </div>
                             {% endfor %}
                         </div>
