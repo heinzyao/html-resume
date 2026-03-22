@@ -297,13 +297,30 @@
         const A4_H_PX = 297 / 25.4 * 96;
 
         function scaleToFit() {
-            const el = document.querySelector('.page-container');
-            el.style.zoom = '';                          // 先重置，量真實高度
-            const naturalH = el.scrollHeight;
-            const scale = Math.min(1, A4_H_PX / naturalH);
+            const container = document.querySelector('.page-container');
+            container.style.zoom = '';
+
+            // 分別量中英文版的自然高度，取最大值，確保兩版縮放一致
+            const zhEl = document.getElementById('resume-zh');
+            const enEl = document.getElementById('resume-en');
+            const zhPrev = zhEl.style.display;
+            const enPrev = enEl.style.display;
+
+            zhEl.style.display = 'block';
+            enEl.style.display = 'none';
+            const zhH = container.scrollHeight;
+
+            zhEl.style.display = 'none';
+            enEl.style.display = 'block';
+            const enH = container.scrollHeight;
+
+            zhEl.style.display = zhPrev;
+            enEl.style.display = enPrev;
+
+            const scale = Math.min(1, A4_H_PX / Math.max(zhH, enH));
 
             // 螢幕預覽：zoom 套在容器上
-            if (scale < 1) el.style.zoom = scale.toFixed(6);
+            if (scale < 1) container.style.zoom = scale.toFixed(6);
 
             // 瀏覽器列印：改用 body zoom，讓 Chrome 正確計算 PDF 連結座標
             document.getElementById('print-scale-style').textContent = scale < 1
