@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Yao - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif+TC:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 列印專用設定 (Ctrl+P / Cmd+P 匯出 PDF 時觸發) */
+        @media print {
+            @page { size: A4; margin: 0; }
+            body { 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact; 
+                background: white !important; 
+            }
+            .no-print { display: none !important; }
+            .page-container { 
+                box-shadow: none !important; 
+                margin: 0 !important; 
+                width: 210mm !important; 
+                height: 297mm !important; 
+                padding: 12mm 15mm !important; 
+                overflow: hidden; 
+                background: white !important; 
+            }
+        }
+        /* 雜誌風字體與邊框設定 */
+        .font-serif-mag { font-family: 'Merriweather', 'Noto Serif TC', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        .border-mag-thick { border-top: 4px solid #0f172a; border-bottom: 1px solid #0f172a; }
+        .border-mag-thin { border-top: 1px solid #cbd5e1; border-bottom: 1px solid #cbd5e1; }
+    </style>
+</head>
+<body class="min-h-screen bg-[#ecebdc] text-slate-900 py-0 md:py-10 print:py-0 print:bg-white flex justify-center font-sans">
+    
+    <div class="no-print fixed top-6 right-6 bg-white shadow-lg rounded-full px-4 py-2 flex items-center space-x-2 border border-slate-200 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-500"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+        <button onclick="switchLang('en')" id="btn-en" class="text-sm font-semibold transition-colors text-slate-400 hover:text-slate-600 focus:outline-none">EN</button>
+        <span class="text-slate-300">|</span>
+        <button onclick="switchLang('zh')" id="btn-zh" class="text-sm font-semibold transition-colors text-blue-700 focus:outline-none">中文</button>
+    </div>
+
+    <div class="page-container w-full max-w-[210mm] bg-[#FDFCF8] shadow-2xl relative p-6 md:p-[12mm_15mm] mx-auto box-border overflow-hidden">
+        
+        <div id="resume-zh" style="display: block;">
+            <header class="mb-6 text-center">
+                <h1 class="font-serif-mag text-4xl font-black text-slate-900 uppercase tracking-widest mb-1.5">
+                    姚璇亨 <span class="text-xl font-light text-slate-500 tracking-normal ml-2">(Henry Yao)</span>
+                </h1>
+                <div class="flex flex-wrap justify-center items-center gap-3 text-xs mt-3 text-slate-700 font-medium">
+                    <a href="mailto:henryyao1126@gmail.com" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        henryyao1126@gmail.com
+                    </a>
+                    <span class="text-slate-300">•</span>
+                    <span class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        0913-199-297
+                    </span>
+                    <span class="text-slate-300">•</span>
+                    <a href="https://www.linkedin.com/in/hsuan-heng-yao-31075a5b/" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        LinkedIn
+                    </a>
+                    <span class="text-slate-300">•</span>
+                    <a href="https://github.com/heinzyao" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        GitHub
+                    </a>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-7">
+                <div class="md:col-span-4 space-y-6">
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">個人簡介</h2>
+                        <p class="text-[11.5px] leading-relaxed text-slate-700 text-justify">
+                            具備 5 年以上資料科學領域實務經驗，專精於將複雜數據轉化為可執行的商業決策。擅長使用 Python、SQL 與 Google Cloud Platform，具備機器學習模型開發、自然語言處理、儀表板建置與 KPI 指標定義能力。擁有在銀行業將機器學習模型、生成式 AI 工具整合至營運環境的實戰經驗，代表成果包括防詐 AI 模型效能提升近 2 倍（2025 PTGA 標竿專案）及行銷活動轉換率達 30%。取得 iPAS AI 應用規劃師中級認證。
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">技術技能</h2>
+                        <div class="space-y-3">
+                            <div class="border-b border-slate-200 pb-1.5">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">程式語言</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">Python · SQL（SQL Server · PostgreSQL）· Bash / Shell Script</p>
+                            </div>
+                            <div class="border-b border-slate-200 pb-1.5">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">機器學習 / AI</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">PyTorch · Scikit-Learn · Transformers（HuggingFace）· RNN · TF-IDF · LLM API 整合</p>
+                            </div>
+                            <div class="border-b border-slate-200 pb-1.5">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">資料分析</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">Pandas · NumPy · SciPy · NLP / 意見探勘 · 特徵工程 · 統計建模</p>
+                            </div>
+                            <div class="border-b border-slate-200 pb-1.5">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">視覺化 / BI</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">Tableau · Streamlit · Matplotlib</p>
+                            </div>
+                            <div class="border-b border-slate-200 pb-1.5">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">DevOps / 雲端</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">Docker · Docker Compose · GCP · Git · Linux</p>
+                            </div>
+                            <div>
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">應用領域</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">金融科技 · 反詐騙 AI · CRM 分析 · 數位醫療 · 消費者研究</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">學歷</h2>
+                        <div class="space-y-3">
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">數位內容與技術碩士</h3>
+                                <p class="text-[11px] text-slate-600 italic mt-0.5">國立政治大學 (NCCU)</p>
+                                <p class="text-[10px] font-medium text-slate-400 mt-0.5">2018 — 2020</p>
+                            </div>
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">政治學學士（國際關係組）</h3>
+                                <p class="text-[11px] text-slate-600 italic mt-0.5">國立臺灣大學 (NTU)</p>
+                                <p class="text-[10px] font-medium text-slate-400 mt-0.5">2007 — 2010</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">技能認證</h2>
+                        <div class="space-y-2.5">
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">AI 應用規劃師能力鑑定 — 中級（iPAS）</h3>
+                                <p class="text-[10.5px] text-slate-600 mt-0.5">經濟部產業人才能力鑑定</p>
+                                <p class="text-[10px] text-slate-400 mt-0.5">2025.11</p>
+                            </div>
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">生成式 AI 能力認證</h3>
+                                <p class="text-[10.5px] text-slate-600 mt-0.5">財團法人資訊工業策進會</p>
+                                <p class="text-[10px] text-slate-400 mt-0.5">2025.09</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="md:col-span-8">
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-4 text-slate-900">工作經歷</h2>
+                        <div class="space-y-4">
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">商業分析師 <span class="text-slate-400 font-sans mx-1">|</span> 凱基商業銀行</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">2021 年 12 月 — 至今</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">防詐 AI 模型重建：</span>於 2025 年專案管理大獎（PTGA）標竿專案「智能雷達防詐網 AI RADAR」中，主導開發環境建置、重構資料流，進行模型重新訓練與部署，將原始模型 Recall 與 Precision 提升近 2 倍。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">預測模型開發：</span>設計分類模型預測會員升等意願，應用於精準行銷活動，達成 30% 轉換率，佔整體升等人數 15%，績效超過傳統規則基準的兩倍以上。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">LLM 自動化流程：</span>整合底層顧客交易資料與開源 LLM API，建立高成本效益的自動化客戶貼標系統，供業務單位經營參考。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">行為模式 NLP 分析：</span>對行動銀行足跡進行資料清洗與文字處理，運用 PyTorch 與 Scikit-Learn 建置 RNN 及 TF-IDF 模型，分析會員行為特徵。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">輿情監控自動化：</span>設計 Google / Threads 自動搜尋爬蟲，以 Docker 容器部署至 GCP 雲端執行，提供業務單位持續輿情訊號。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">管理報表建置：</span>開發會員動態追蹤 Tableau 儀表板，讓高階主管與業務單位能從多個維度即時監控 CRM 年度 KPI。</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">資料分析工程師 <span class="text-slate-400 font-sans mx-1">|</span> 臺灣益謙股份有限公司</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">2020 年 10 月 — 2021 年 7 月</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">模組整合與 MVP 交付：</span>運用 Docker、Git 與 Linux 串接產學合作與外包商程式模組，完成 POC 至 MVP 開發，促成約新台幣 100 萬元初期營收。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">臨床資料處理：</span>以 SciPy 進行 FFT 波形資料轉換，並以 Streamlit 開發即時視覺化工具，每日為醫師節省 2 小時以上作業時間。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">模型校正與部署：</span>與外部資料顧問團隊合作，校正並部署用於預測波形的機器學習迴歸模型，應用於血壓量測儀器資料校正。</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">研究助理 <span class="text-slate-400 font-sans mx-1">|</span> 政大資科系語言與知識科技實驗室</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">2019 年 8 月 — 2020 年 7 月</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">意見探勘研究：</span>運用資料爬蟲與 Transformer 預訓練語言模型，對酒評網站 2,500 筆評論文本進行意見探勘與預測，完成研究計畫。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">產學合作：</span>參與 KKBOX 產學合作計畫，透過 IoT log 語音搜尋記錄探勘與 App Store 評論分析，提出使用者體驗改良建議。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">教學輔導：</span>擔任自然語言處理課程助教，負責 70 名以上學生之課程輔導與作業指導。</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">業務經理 <span class="text-slate-400 font-sans mx-1">|</span> 李奧貝納股份有限公司</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">2017 年 2 月 — 2019 年 4 月</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">品牌策略：</span>協調內部策略、創意與日本電通，開發嘉新企業集團 re-branding 策略，促成近 5 年唯一落地的品牌宣言影片企劃。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">跨國品牌管理：</span>協助雀巢咖啡、海尼根台灣等跨國企業進行 3 個年度專案的品牌素材本地化、競品調查與消費者體驗設計。</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">專案經理（數位行銷組） <span class="text-slate-400 font-sans mx-1">|</span> 外貿協會 (TAITRA)</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">2015 年 11 月 — 2017 年 1 月</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">流失分析：</span>透過業務系統資料分析定義關鍵流失指標，減少台北國際會議中心（TICC）約 10% 的場地取消預訂損失。</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">社群行銷成效：</span>擔任台北國際會議中心 Facebook 社群行銷負責人，以新台幣 30,000 元年度經費，一年內增加 10 倍專頁追蹤人數。</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">專案副理 <span class="text-slate-400 font-sans mx-1">|</span> 迷你麥斯有限公司</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">2013 年 11 月 — 2015 年 10 月</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">市場調查：</span>參與百威英博中國、聯合利華中國的新上市產品使用者調查計畫，協助設計品牌溝通策略與廣告製作執行。</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="resume-en" style="display: none;">
+            <header class="mb-6 text-center">
+                <h1 class="font-serif-mag text-4xl font-black text-slate-900 uppercase tracking-widest mb-1.5">
+                    HSUAN HENG YAO <span class="text-xl font-light text-slate-500 tracking-normal ml-2">(Henry)</span>
+                </h1>
+                <div class="flex flex-wrap justify-center items-center gap-3 text-xs mt-3 text-slate-700 font-medium">
+                    <a href="mailto:henryyao1126@gmail.com" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        henryyao1126@gmail.com
+                    </a>
+                    <span class="text-slate-300">•</span>
+                    <a href="https://www.linkedin.com/in/hsuan-heng-yao-31075a5b/" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        LinkedIn
+                    </a>
+                    <span class="text-slate-300">•</span>
+                    <a href="https://github.com/heinzyao" class="flex items-center gap-1 hover:text-blue-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        GitHub
+                    </a>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-7">
+                <div class="md:col-span-4 space-y-6">
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">Professional Summary</h2>
+                        <p class="text-[11.5px] leading-relaxed text-slate-700 text-justify">
+                            Data professional with 4+ years of hands-on experience in machine learning, NLP, and business intelligence within the financial services sector. Proven track record of translating complex data into actionable insights — from building predictive ML models that doubled campaign conversion rates, to deploying LLM-powered automation pipelines in production. Combines a strong technical foundation (Python, PyTorch, SQL, Docker, GCP) with cross-functional communication skills honed across advertising, trade development, and healthtech roles.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">Technical Skills</h2>
+                        <div class="space-y-3">
+                            <div class="border-b border-slate-200 pb-1.5">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">Languages</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">Python · SQL (SQL Server, PostgreSQL) · Bash</p>
+                            </div>
+                            <div class="border-b border-slate-200 pb-1.5">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">ML / AI</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">PyTorch · Scikit-Learn · Transformers (HuggingFace) · RNN · TF-IDF · LLM API Integration</p>
+                            </div>
+                            <div class="border-b border-slate-200 pb-1.5">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">Data & BI</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">Tableau · Streamlit · Pandas · NumPy · SciPy · NLP / Opinion Mining</p>
+                            </div>
+                            <div class="border-b border-slate-200 pb-1.5">
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">DevOps / Cloud</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">Docker · Docker Compose · GCP · Git · Linux · CI/CD</p>
+                            </div>
+                            <div>
+                                <h3 class="text-[10.5px] font-bold text-slate-800 uppercase tracking-wider mb-0.5">Domains</h3>
+                                <p class="text-[11.5px] text-slate-600 leading-snug">Banking & FinTech · CRM Analytics · Digital Health · Consumer Insights</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-3 text-slate-900">Education</h2>
+                        <div class="space-y-3">
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">M.S. in Digital Content and Technology</h3>
+                                <p class="text-[11px] text-slate-600 italic mt-0.5">National Chengchi University (NCCU)</p>
+                                <p class="text-[10px] font-medium text-slate-400 mt-0.5">2018 – 2020</p>
+                            </div>
+                            <div>
+                                <h3 class="text-[11.5px] font-bold text-slate-800 leading-snug">B.A. in Political Science / International Relations</h3>
+                                <p class="text-[11px] text-slate-600 italic mt-0.5">National Taiwan University (NTU)</p>
+                                <p class="text-[10px] font-medium text-slate-400 mt-0.5">2007 – 2010</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="md:col-span-8">
+                    <section>
+                        <h2 class="font-serif-mag text-[15px] font-bold uppercase tracking-widest border-mag-thick py-1 mb-4 text-slate-900">Work Experience</h2>
+                        <div class="space-y-4">
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">Business Analyst <span class="text-slate-400 font-sans mx-1">|</span> KGI Commercial Bank</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">Dec 2021 – Present</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Generative AI Implementation: </span>Integrated customer transaction data with open-source LLM APIs to build a cost-effective automated customer-tagging pipeline, reducing manual classification effort and supporting downstream CRM operations.</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Predictive Modeling: </span>Engineered ML models to predict membership tier upgrades for targeted marketing campaigns, achieving a 30% conversion rate — representing 15% of total upgrades and more than doubling the performance of rule-based criteria.</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">User Behavior Analysis: </span>Applied NLP (TF-IDF) and deep learning (RNN via PyTorch) to mobile banking behavioral footprints, uncovering usage patterns that informed product and UX decisions.</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Cloud Automation: </span>Architected and deployed automated public-opinion web scrapers (Google, Threads) using Docker containers on GCP, enabling continuous sentiment monitoring for the business units.</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Business Intelligence: </span>Built Tableau dashboards for dynamic membership tracking, giving executives and business units real-time visibility into multi-dimensional CRM KPIs and annual targets.</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">Data Analysis Engineer <span class="text-slate-400 font-sans mx-1">|</span> Taiwan Echain Co. Ltd.</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">Oct 2020 – Jul 2021</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Product Development: </span>Led end-to-end POC and MVP development by integrating modules from academic partners and external vendors using Docker, Git, and Linux; contributed to approximately NT$1 M in early-stage revenue.</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Clinical Data Processing: </span>Built SciPy-based FFT waveform conversion and Streamlit visualization tools for clinical pulse data, saving physicians over 2 hours of manual data-processing work per day.</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">System Calibration: </span>Collaborated with data consultants to calibrate and productionize ML regression models used to correct blood pressure device readings in clinical settings.</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">Research Assistant <span class="text-slate-400 font-sans mx-1">|</span> Dept. of Computer Science, NCCU</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">Aug 2019 – Jul 2020</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Opinion Mining: </span>Applied web scraping and Transformer pre-trained models to perform opinion mining and sentiment prediction across 2,500 wine reviews.</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Education: </span>Served as Teaching Assistant for an NLP course, supporting over 70 students through guidance, code review, and grading.</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Industry Collaboration: </span>Mined IoT voice-search logs and App Store reviews in an industry collaboration with KKBOX, delivering UX improvement recommendations.</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">Account Manager <span class="text-slate-400 font-sans mx-1">|</span> Leo Burnett Taiwan</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">Feb 2017 – May 2019</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Strategic Branding: </span>Coordinated with internal strategy/creative teams and Dentsu Japan to develop a comprehensive re-branding strategy for Chia Hsin Cement Group.</span></li>
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">International Brand Management: </span>Managed annual campaigns for MNCs including Nescafé and Heineken Taiwan, covering brand localization, competitive analysis, and consumer experience design.</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">Project Manager <span class="text-slate-400 font-sans mx-1">|</span> Taiwan External Trade Development Council (TAITRA)</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">Nov 2015 – Jan 2017</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Churn Analysis: </span>Analyzed business system data to identify key churn indicators at the Taipei International Convention Center (TICC), driving a ~10% reduction in venue cancellation losses.</span></li>
+                                </ul>
+                            </div>
+                            <div class="relative pl-3.5 border-l-2 border-slate-200">
+                                <div class="absolute w-[6px] h-[6px] bg-slate-900 rounded-full -left-[4px] top-1.5"></div>
+                                <div class="mb-1.5 flex justify-between items-baseline">
+                                    <h3 class="font-serif-mag text-[14px] font-bold text-slate-900">Associate Project Manager <span class="text-slate-400 font-sans mx-1">|</span> Minimax Design Co. Ltd.</h3>
+                                    <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider whitespace-nowrap ml-2">Nov 2013 – Oct 2015</p>
+                                </div>
+                                <ul class="space-y-1.5 mt-2">
+                                    <li class="text-[11.5px] text-slate-700 leading-relaxed flex items-start"><span class="text-slate-400 mr-1.5 mt-0.5 block text-[10px]">▪</span><span><span class="font-bold text-slate-800">Consumer Research: </span>Supported new product launch user surveys for AB InBev China and Unilever China, contributing to brand communication strategy and advertising execution.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 left-[15mm] right-[15mm] border-mag-thin pt-1.5 text-center text-[9px] text-slate-400 uppercase tracking-widest">
+            Henry Yao — Professional Profile
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            if (lang === 'zh') {
+                document.getElementById('resume-zh').style.display = 'block';
+                document.getElementById('resume-en').style.display = 'none';
+                document.getElementById('btn-zh').className = "text-sm font-semibold transition-colors text-blue-700 focus:outline-none";
+                document.getElementById('btn-en').className = "text-sm font-semibold transition-colors text-slate-400 hover:text-slate-600 focus:outline-none";
+            } else {
+                document.getElementById('resume-zh').style.display = 'none';
+                document.getElementById('resume-en').style.display = 'block';
+                document.getElementById('btn-en').className = "text-sm font-semibold transition-colors text-blue-700 focus:outline-none";
+                document.getElementById('btn-zh').className = "text-sm font-semibold transition-colors text-slate-400 hover:text-slate-600 focus:outline-none";
+            }
+        }
+    </script>
+</body>
+</html>
