@@ -28,7 +28,7 @@ summary:
 
 skills_zh:
   - name: "程式語言"
-    items: "Python · SQL（SQL Server · PostgreSQL）· Bash / Shell Script"
+    items: "Python · SQL（SQL Server）· Bash / Shell Script"
   - name: "機器學習 / AI"
     items: "PyTorch · Scikit-Learn · Transformers（HuggingFace）· RNN · TF-IDF · LLM API 整合"
   - name: "資料分析"
