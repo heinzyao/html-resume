@@ -42,7 +42,7 @@ skills_zh:
 
 skills_en:
   - name: "Languages"
-    items: "Python · SQL (SQL Server, PostgreSQL) · Bash"
+    items: "Python · SQL (SQL Server) · Bash"
   - name: "ML / AI"
     items: "PyTorch · Scikit-Learn · Transformers (HuggingFace) · RNN · TF-IDF · LLM API Integration"
   - name: "Data & BI"
