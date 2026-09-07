@@ -12,25 +12,24 @@ personal:
 
 summary:
   zh: >
-    具備 5 年以上資料科學領域實務經驗，專精於將複雜數據轉化為可執行的商業決策。擅長使用
-    Python、SQL 與 Google Cloud Platform，具備機器學習模型開發、自然語言處理、儀表板建置與
-    KPI 指標定義能力。擁有在銀行業將機器學習模型、生成式 AI 工具整合至營運環境的實戰經驗，
+    具備 5 年以上資料科學領域實務經驗，專精於將複雜數據轉化為可執行的方案。擅長使用
+    Python、SQL、Google Cloud Platform，具備生成式 AI 應用、機器學習模型開發、自動化流程建置能力。
+    擁有在銀行業將機器學習模型、生成式 AI 工具整合至營運環境的實戰經驗，
     代表成果包括防詐 AI 模型效能提升近 2 倍（2025 PTGA 標竿專案）及行銷活動轉換率達 30%。
     取得 iPAS AI 應用規劃師中級認證。
   en: >
     Data professional with 5+ years of hands-on experience in machine learning, NLP, and
     business intelligence within the financial services sector. Proven track record of translating
-    complex data into actionable insights — from building predictive ML models that doubled
+    complex data into actions — from building predictive ML models that doubled
     campaign conversion rates, to deploying LLM-powered automation pipelines in production.
-    Combines a strong technical foundation (Python, PyTorch, SQL, Docker, GCP) with
-    cross-functional communication skills honed across advertising, trade development, and
-    healthtech roles.
+    Combines a technical foundation (Python, SQL,  GCP) with
+    cross-functional communication skills.
 
 skills_zh:
   - name: "程式語言"
     items: "Python · SQL（SQL Server）· Bash / Shell Script"
   - name: "機器學習 / AI"
-    items: "PyTorch · Scikit-Learn · Transformers（HuggingFace）· RNN · TF-IDF · LLM API 整合"
+    items: "Scikit-Learn · Transformers（HuggingFace）· LLM API 整合"
   - name: "資料分析"
     items: "Pandas · NumPy · SciPy · NLP / 意見探勘 · 特徵工程 · 統計建模"
   - name: "視覺化 / BI"
@@ -44,7 +43,7 @@ skills_en:
   - name: "Languages"
     items: "Python · SQL (SQL Server) · Bash"
   - name: "ML / AI"
-    items: "PyTorch · Scikit-Learn · Transformers (HuggingFace) · RNN · TF-IDF · LLM API Integration"
+    items: "Scikit-Learn · Transformers (HuggingFace) · LLM API Integration"
   - name: "Data & BI"
     items: "Tableau · Streamlit · Pandas · NumPy · SciPy · NLP / Opinion Mining"
   - name: "DevOps / Cloud"
@@ -98,8 +97,7 @@ experience:
           經營參考。
       - title: "行為模式 NLP 分析："
         desc: >
-          對行動銀行足跡進行資料清洗與文字處理，運用 PyTorch 與 Scikit-Learn 建置 RNN 及
-          TF-IDF 模型，分析會員行為特徵。
+          對行動銀行足跡進行資料清洗與文字處理，運用 Scikit-Learn 建置 TF-IDF 模型，分析會員行為特徵。
       - title: "輿情監控自動化："
         desc: >
           設計 Google / Threads 自動搜尋爬蟲，以 Docker 容器部署至 GCP 雲端執行，提供業務單位
