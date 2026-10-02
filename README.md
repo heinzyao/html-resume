@@ -57,7 +57,7 @@ GitHub Pages updates about a minute later.
 
 | Section | Description |
 |------|------|
-| `personal` | Name, email, phone, LinkedIn, GitHub |
+| `personal` | Name, email, LINE ID, WhatsApp ID, LinkedIn, GitHub |
 | `summary` | Personal summary (`zh` / `en`) |
 | `skills_zh` / `skills_en` | Skill categories (defined separately per language) |
 | `education` | Education (`degree_zh/en`, `school_zh/en`, `period`) |
@@ -125,7 +125,7 @@ GitHub Pages 約 1 分鐘後自動更新。
 
 | 區塊 | 說明 |
 |------|------|
-| `personal` | 姓名、Email、電話、LinkedIn、GitHub |
+| `personal` | 姓名、Email、LINE ID、WhatsApp ID、LinkedIn、GitHub |
 | `summary` | 個人簡介（`zh` / `en`） |
 | `skills_zh` / `skills_en` | 技術技能分類（中英文各自定義） |
 | `education` | 學歷（`degree_zh/en`、`school_zh/en`、`period`） |
