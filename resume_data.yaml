@@ -35,7 +35,7 @@ skills_zh:
   - name: "DevOps / 雲端"
     items: "Docker · Google Cloud Platform · Git · Linux · AirFlow"
   - name: "應用領域"
-    items: "AI 異常偵測 · CRM 分析 · 使用者研究"
+    items: "AI 金融科技 · CRM 分析 · 數位內容科技 · 人機互動"
 
 skills_en:
   - name: "Languages"
@@ -47,7 +47,7 @@ skills_en:
   - name: "DevOps / Cloud"
     items: "Docker · Google Cloud Platform · Git · Linux · AirFlow"
   - name: "Domains"
-    items: "AI Anomaly Detection · CRM Analytics · User Research"
+    items: "AI Fintech · CRM Analytics · Digital Content Technology · Human-Computer Interaction"
 
 education:
   - degree_zh: "數位內容與技術碩士"
