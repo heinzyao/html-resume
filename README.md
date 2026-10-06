@@ -17,7 +17,7 @@ html-resume/
 ├── template.html      # Jinja2 template (design layer, Tailwind CSS)
 ├── build.py           # build script: YAML → HTML, optional --pdf
 ├── index.html         # generated static page (served by GitHub Pages)
-└── pyproject.toml     # uv project config (jinja2, pyyaml)
+└── pyproject.toml     # uv project config (jinja2, pyyaml, playwright)
 ```
 
 ### Everyday Use
@@ -33,11 +33,10 @@ uv run python build.py   # regenerate index.html
 
 #### Generate a PDF
 
-Requires Playwright:
+Requires the Chromium browser for Playwright (one-time):
 
 ```bash
-uv pip install playwright
-playwright install chromium
+uv run playwright install chromium
 uv run python build.py --pdf             # writes resume.pdf (Chinese)
 uv run python build.py --pdf --lang en   # writes resume_en.pdf
 uv run python build.py --pdf --lang zh en
@@ -87,7 +86,7 @@ html-resume/
 ├── template.html      # Jinja2 模板（設計層，Tailwind CSS）
 ├── build.py           # 建置腳本：YAML → HTML，可選 --pdf
 ├── index.html         # 產出的靜態頁面（GitHub Pages 用）
-└── pyproject.toml     # uv 專案設定（jinja2、pyyaml）
+└── pyproject.toml     # uv 專案設定（jinja2、pyyaml、playwright）
 ```
 
 ### 日常使用
@@ -103,11 +102,10 @@ uv run python build.py   # 重新產生 index.html
 
 #### 產生 PDF
 
-需先安裝 Playwright：
+需先安裝 Playwright 用的 Chromium（一次性）：
 
 ```bash
-uv pip install playwright
-playwright install chromium
+uv run playwright install chromium
 uv run python build.py --pdf             # 產出 resume.pdf（中文）
 uv run python build.py --pdf --lang en   # 產出 resume_en.pdf
 uv run python build.py --pdf --lang zh en
