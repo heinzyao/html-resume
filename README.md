@@ -38,7 +38,9 @@ Requires Playwright:
 ```bash
 uv pip install playwright
 playwright install chromium
-uv run python build.py --pdf   # writes resume.pdf
+uv run python build.py --pdf             # writes resume.pdf (Chinese)
+uv run python build.py --pdf --lang en   # writes resume_en.pdf
+uv run python build.py --pdf --lang zh en
 ```
 
 The PDF is auto-scaled so everything fits on a single A4 page.
@@ -106,7 +108,9 @@ uv run python build.py   # 重新產生 index.html
 ```bash
 uv pip install playwright
 playwright install chromium
-uv run python build.py --pdf   # 產出 resume.pdf
+uv run python build.py --pdf             # 產出 resume.pdf（中文）
+uv run python build.py --pdf --lang en   # 產出 resume_en.pdf
+uv run python build.py --pdf --lang zh en
 ```
 
 PDF 會自動縮放以確保內容完整呈現在一頁 A4 內。
